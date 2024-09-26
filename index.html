@@ -52,7 +52,7 @@
 <body>
     <h1>Coming Soon AirDrop</h1>
     <p>Score: <span id="score">0</span></p>
-    <canvas id="gameCanvas" width="400" height="600"></canvas>
+    <canvas id="gameCanvas" width="400" height="550"></canvas>
 
     <button id="resetBtn">Reset Score</button>
 
@@ -78,7 +78,7 @@
 
         // Define the player and coin
         let player = {x: 50, y: 350, width: 50, height: 50, color: 'red', speed: 5};
-        let coin = {x: Math.random() * 250, y: Math.random() * 200, width: 20, height: 20, color: 'gold'};
+        let coin = {x: Math.random() * 300, y: Math.random() * 250, width: 20, height: 20, color: 'gold'};
 
         // Track touch position
         let touchX = 0;
@@ -123,8 +123,8 @@
                 localStorage.setItem('coinGameScore', score);
 
                 // Move the coin to a new random position
-                coin.x = Math.random() * 250;
-                coin.y = Math.random() * 200;
+                coin.x = Math.random() * 300;
+                coin.y = Math.random() * 250;
             }
 
             requestAnimationFrame(gameLoop);
