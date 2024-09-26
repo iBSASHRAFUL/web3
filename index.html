@@ -51,10 +51,10 @@
 
 <body>
     <h1>Coming Soon AirDrop</h1>
-    <p>Score: <span id="score">0</span></p>
+    <p>$: <span id="score">0</span></p>
     <canvas id="gameCanvas" width="400" height="508"></canvas>
 
-    <button id="resetBtn">Reset Score</button>
+    
 
     <div class="navbar">
         <ul>
@@ -132,12 +132,7 @@
 
         gameLoop();
 
-        // Reset score functionality
-        resetBtn.addEventListener('click', () => {
-            score = 0;
-            scoreElement.textContent = score;
-            localStorage.setItem('coinGameScore', score);
-        });
+        
     </script>
 </body>
 
