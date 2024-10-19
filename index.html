@@ -51,6 +51,29 @@
             color: black;
         }
     </style>
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <script>
+        const AdController = window.Adsgram.init({
+  blockId: "4426",
+  debug: true,
+  debugBannerType: "FullscreenMedia"
+});
+       AdController.show().then((result) => {
+    // user watch ad till the end
+    // your code to reward user
+}).catch((result) => {
+    // user get error during playing ad or skip ad
+    // do nothing or whatever you want
+})
+        interface ShowPromiseResult {
+    done: boolean; // true if user watch till the end, otherwise false
+    description: string; // event description
+    state: 'load' | 'render' | 'playing' | 'destroy'; // banner state
+    error: boolean; // true if event was emitted due to error, otherwise false
+}
+        
+ 
+    </script>
 </head>
 
 <body>
@@ -142,6 +165,8 @@
 
         
     </script>
+    
+    
 </body>
 
 </html>
